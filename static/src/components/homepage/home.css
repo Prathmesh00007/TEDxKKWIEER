@@ -1,0 +1,22 @@
+.tedx_logo12 {
+    display: flex ;
+    height: fit-content ;
+    width: 100%;
+    justify-content: center ;
+    z-index: 15 ;
+  }
+
+.tedx_logo{
+  width: 40%;
+}
+  
+.main-wrapper {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+
+    border: 0.15rem solid ivory;
+    height: 10rem;
+    width: 30vw;
+  }
