@@ -1,43 +1,71 @@
 import React, { useEffect, useState } from 'react';
 import { Twitter, Linkedin, Facebook, Instagram } from 'lucide-react'; // Import icons
-import '../index.css';
 
 const speaker_card = [
     {
-        img: "/unknown2.jpeg",
+        img: "/bajaj.jpg",
         id: 1,
+        name: "Ranjit Bajaj",
+        position: "Founder of Minerva Punjab FC",
         social: [
             { icon: <Twitter />, link: "#" },
             { icon: <Linkedin />, link: "#" },
         ]
     },
     {
-        img: "/unknown2.jpeg",
+        img: "Kanwar.jpg",
         id: 2,
+        name: "Col. Shivender Pratap Singh Kanwar",
+        position: "Founder of Kanwar Enterprises",
         social: [
             { icon: <Twitter />, link: "#" },
-            { icon: <Instagram />, link: "#" },
+            { icon: <Linkedin />, link: "#" },
+            { icon: <Facebook />, link: "#" }
         ]
     },
     {
         img: "/unknown2.jpeg",
         id: 3,
+        name: "? ? ?",
+        // position: "Author, Poet, Lyricist, Screenwriter",
         social: [
-            { icon: <Facebook />, link: "#" },
-            { icon: <Linkedin />, link: "#" },
+            // { icon: <Twitter />, link: "#" },
+            // { icon: <Instagram />, link: "#" }
+        ]
+    },
+    {img: "/unknown2.jpeg",
+        id: 4,
+        name: "? ? ?",
+        // position: "Author, Poet, Lyricist, Screenwriter",
+        social: [
+            // { icon: <Twitter />, link: "#" },
+            // { icon: <Instagram />, link: "#" }
         ]
     },
     {
         img: "/unknown2.jpeg",
-        id: 4,
+        id: 5,
+        name: "? ? ?",
+        // position: "Author, Poet, Lyricist, Screenwriter",
         social: [
-            { icon: <Instagram />, link: "#" },
-            { icon: <Linkedin />, link: "#" },
+            // { icon: <Twitter />, link: "#" },
+            // { icon: <Instagram />, link: "#" }
+        ]
+    },
+    {
+        img: "/unknown2.jpeg",
+        id: 6,
+        name: "? ? ?",
+        // position: "Author, Poet, Lyricist, Screenwriter",
+        social: [
+            // { icon: <Twitter />, link: "#" },
+            // { icon: <Instagram />, link: "#" }
         ]
     },
 ];
 
-const Speaker = () => {
+const Team = () => {
+    const [hoveredCard, setHoveredCard] = useState(null); // State to track hovered card
     const [visibleCount, setVisibleCount] = useState(4); // State to track visible cards
 
     useEffect(() => {
@@ -49,73 +77,67 @@ const Speaker = () => {
     };
 
     return (
-        <div id='speaker' className="bg-black max-w-screen overflow-x-hidden relative">
-            {/* Section Background and Overlay */}
-            <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url("/background-image.jpg")' }}>
-                <div className="absolute inset-0 bg-black opacity-40" />
-            </div>
-
-            <section className="team mt-5 relative z-10 py-12">
+        <div id="team" className="bg-black max-w-screen overflow-x-hidden">
+            <section className="team mt-5">
                 <div className="container mx-auto px-4">
-                    {/* Title Section with Animation */}
-                    <div className="section-title text-center mb-12">
+                    <div className="section-title text-center mb-8">
                         <h2 className="text-4xl font-bold text-white animate__animated animate__fadeInUp">
                             <span className="text-[#e62b1e]">OUR </span> SPEAKERS
                         </h2>
                         <p className="text-lg text-white mt-4 animate__animated animate__fadeInUp animate__delay-1s">
-                            Our speakers are yet to be disclosed, but stay tuned for some extraordinary minds!
+                            Our all speakers are yet to be disclosed, but stay tuned for some extraordinary minds!
                         </p>
                     </div>
-
-                    {/* Speakers Card Grid */}
                     <div className="flex flex-wrap justify-center">
                         {speaker_card.slice(0, visibleCount).map((e) => (
                             <div
-                                className="relative w-[230px] rounded-[20px] bg-black p-[5px] overflow-hidden shadow-lg m-2.5 transform transition duration-300 hover:scale-105 hover:shadow-xl"
+                                className={`relative w-[230px] rounded-[20px] bg-black p-[5px] overflow-hidden shadow-lg transition duration-500 ease-in-out m-2.5 ${hoveredCard === e.id ? 'scale-105' : ''
+                                    }`}
                                 key={e.id}
+                                onMouseEnter={() => setHoveredCard(e.id)}
+                                onMouseLeave={() => setHoveredCard(null)}
                             >
-                                <div className="relative flex flex-col rounded-t-[15px] overflow-hidden bg-[#2d2d2d]">
+                                <div
+                                    className={`relative flex flex-col rounded-t-[15px] overflow-hidden ${hoveredCard === e.id ? '' : 'bg-[#2d2d2d]'
+                                        }`}
+                                >
+                                    {/* Image with opacity change on hover */}
                                     <img
                                         src={e.img}
-                                        alt={`Speaker ${e.id}`}
-                                        className="w-full rounded-tl-[15px] rounded-tr-[15px] transition-opacity duration-300"
+                                        alt={e.name}
+                                        className={`w-full rounded-tl-[15px] rounded-tr-[15px] transition-opacity duration-300 ${hoveredCard === e.id ? 'opacity-50' : 'opacity-100'
+                                            }`}
                                     />
-                                    {/* Social Icons Placeholder */}
-                                    <div className="absolute bottom-0 left-0 right-0 flex justify-center space-x-4 py-2 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                                    {/* Icons displayed on hover */}
+                                    <div
+                                        className={`absolute bottom-0 left-0 right-0 flex justify-center space-x-4 transition-transform duration-500 ease-in-out ${hoveredCard === e.id ? 'translate-y-0 py-2' : 'translate-y-full'
+                                            }`}
+                                    >
                                         {e.social.map((social, index) => (
                                             <a
                                                 key={index}
                                                 href={social.link}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="text-white hover:text-gray-200 text-lg"
+                                                className="text-white hover:text-gray-200"
                                             >
                                                 {social.icon}
                                             </a>
                                         ))}
                                     </div>
                                 </div>
+                                <div className="mt-2.5 p-2.5 relative">
+                                    <span className="block text-sm font-bold text-white text-center">{e.name}</span>
+                                    <span className="block text-xs text-gray-400 text-center">{e.position}</span>
+                                </div>
                             </div>
                         ))}
                     </div>
 
-                    {/* View More Button */}
-                
-                    {visibleCount < speaker_card.length && (
-                        <div className="text-center mt-8">
-                            <button
-                                onClick={handleViewMore}
-                                className="bg-[#e62b1e] text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300 hover:bg-[#ff4f56]"
-                            >
-                                View More Speakers
-                            </button>
-                        </div>
-                    )}
-               
                 </div>
             </section>
         </div>
     );
 };
 
-export default Speaker;
+export default Team;

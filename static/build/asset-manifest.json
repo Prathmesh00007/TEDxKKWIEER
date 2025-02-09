@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9063ab33.css",
+    "main.js": "/static/js/main.ea49ed25.js",
+    "static/media/intromob.mp4": "/static/media/intromob.8befdd91b887647bf41d.mp4",
+    "static/media/intro.mp4": "/static/media/intro.032938c0f313930072e9.mp4",
+    "static/media/ContactBg.jpg": "/static/media/ContactBg.2bf53a752dd6ec0f4676.jpg",
+    "static/media/TED_Logo_New.png": "/static/media/TED_Logo_New.6be018abe02368607959.png",
+    "index.html": "/index.html",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
+    "main.9063ab33.css.map": "/static/css/main.9063ab33.css.map",
+    "main.ea49ed25.js.map": "/static/js/main.ea49ed25.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9063ab33.css",
+    "static/js/main.ea49ed25.js"
+  ]
+}

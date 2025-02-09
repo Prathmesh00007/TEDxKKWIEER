@@ -39,7 +39,7 @@ const Home = () => {
   const unlockScroll = () => {
     setTimeout(() => {
       setScrollLocked(false); // Allow free scrolling
-    }, 3000); // Unlock after 3 seconds
+    }, 100); // Unlock after 3 seconds
   };
 
   useEffect(() => {

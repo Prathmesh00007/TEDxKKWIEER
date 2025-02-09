@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import { MouseParallax, ScrollParallax } from "react-just-parallax";
 import debounce from "lodash.debounce"; // Install lodash.debounce
+import ButtonToStart from "./buyButton";
 
 const Homie = () => {
   const [isTextVisible, setTextVisibility] = useState(false);
@@ -27,7 +28,7 @@ const Homie = () => {
 
     const onScroll = debounce(() => {
       const scrollY = window.scrollY;
-      const scrollFactor = scrollY / 500;
+      const scrollFactor = scrollY / 800;
 
       // Scale elements
       if (sunRef.current) {
@@ -57,6 +58,12 @@ const Homie = () => {
           loop
           muted
         ></video>
+
+        <a
+          href="https://konfhub.com/tedxkkwieer"
+          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 "
+        >        <ButtonToStart />
+        </a>
       </div>
     );
   }
@@ -102,9 +109,8 @@ const Homie = () => {
         {/* Text */}
         <div
           ref={textRef}
-          className={`absolute text-white text-4xl md:text-6xl font-bold text-center transition-opacity duration-100 px-4 ${
-            isTextVisible ? "opacity-100" : "opacity-0"
-          }`}
+          className={`absolute text-white text-4xl md:text-6xl font-bold text-center transition-opacity duration-100 px-4 ${isTextVisible ? "opacity-100" : "opacity-0"
+            }`}
           style={{
             top: "70%",
             transform: "translateY(-80%)",
@@ -118,7 +124,7 @@ const Homie = () => {
           {/* Back Mountains */}
           <div className="relative z-0 w-full back-mountains">
             <img
-              src="1.png"
+              src="mountain.png"
               className="w-full h-full object-cover sm:scale-110 md:scale-100 transition-transform duration-300"
               alt="Back Mountains"
               loading="lazy"
@@ -126,6 +132,13 @@ const Homie = () => {
           </div>
         </ScrollParallax>
       </div>
+
+      {/* Buy Ticket Button for Desktop & Mobile */}
+      <a
+        href="https://konfhub.com/tedxkkwieer"
+        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 "
+      >        <ButtonToStart />
+      </a>
     </div>
   );
 };
