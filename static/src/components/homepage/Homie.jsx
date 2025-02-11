@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import { MouseParallax, ScrollParallax } from "react-just-parallax";
 import debounce from "lodash.debounce"; // Install lodash.debounce
+import ButtonToStart from "./buyButton";
 
 const Homie = () => {
   const [isTextVisible, setTextVisibility] = useState(false);
@@ -27,7 +28,7 @@ const Homie = () => {
 
     const onScroll = debounce(() => {
       const scrollY = window.scrollY;
-      const scrollFactor = scrollY / 500;
+      const scrollFactor = scrollY / 800;
 
       // Scale elements
       if (sunRef.current) {
@@ -57,6 +58,12 @@ const Homie = () => {
           loop
           muted
         ></video>
+
+        <a
+          href="https://konfhub.com/tedxkkwieer"
+          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 "
+        >        <ButtonToStart />
+        </a>
       </div>
     );
   }
@@ -126,6 +133,12 @@ const Homie = () => {
           </div>
         </ScrollParallax>
       </div>
+
+      <a
+        href="https://konfhub.com/tedxkkwieer"
+        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 "
+      >        <ButtonToStart />
+      </a>
     </div>
   );
 };
