@@ -146,12 +146,12 @@ const Home = () => {
               Through Resonance." <br /> Let’s come together to spark ideas that
               inspire, elevate, and transform our world!
             </p>
-          </div>
-
-          {/* Call to Action */}
           <div className="mt-8">
             <ButtonToStart />
           </div>
+          </div>
+
+          {/* Call to Action */}
         </div>
       </div>
     </section>
