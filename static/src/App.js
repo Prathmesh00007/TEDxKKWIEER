@@ -12,6 +12,7 @@ import './App.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import TimeLine from './components/TimeLine';
+import SpeakerDetails from './components/SpeakerDetails';
 
 // Lazy load components
 const About = lazy(() => import('./components/Contact'));
@@ -90,6 +91,7 @@ const App = () => {
                 <Route path="/about" element={<About />} />
                 <Route path="/speakers" element={<RecentSpeakers />} />
                 <Route path='/terms' element={<Terms />} />
+                <Route path="/speakers-details" element={<SpeakerDetails/>} />
               </Routes>
             </Suspense>
           </main>

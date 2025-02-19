@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { Twitter, Linkedin, Facebook, Instagram } from 'lucide-react'; // Import icons
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';  // Import useHistory hook for navigation
+import { Twitter, Linkedin, Instagram } from 'lucide-react'; // Import icons
 
 const speaker_card = [
     {
@@ -7,60 +8,44 @@ const speaker_card = [
         id: 1,
         name: "Ranjit Bajaj",
         position: "Founder of Minerva Punjab FC",
+        description: "Ranjit Bajaj is the founder of Minerva Punjab FC, a prominent football team in India.",
         social: [
             { icon: <Instagram />, link: "https://www.instagram.com/ranjitbajaj?igsh=MXN0ZTV1cHlhbjV1aQ==" },
-            { icon: <Linkedin/>, link: "https://www.linkedin.com/in/ranjit-bajaj-6855675a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
-            { icon: <Twitter/>, link: "https://x.com/THE_RanjitBajaj" },
+            { icon: <Linkedin />, link: "https://www.linkedin.com/in/ranjit-bajaj-6855675a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+            { icon: <Twitter />, link: "https://x.com/THE_RanjitBajaj" },
         ]
     },
     {
-        img: "Kanwar.jpg",
+        img: "/Kanwar.jpg",
         id: 2,
         name: "Col. Shivender Pratap Singh Kanwar",
         position: "Founder of Team Global Security Solutions",
+        description: "Col. Shivender Pratap Singh Kanwar is a seasoned leader in the security industry.",
         social: [
             { icon: <Instagram />, link: "https://www.instagram.com/shivender.kanwar?igsh=ejMwZDdndDlvMWsz" },
-            { icon: <Linkedin/>, link: "https://www.linkedin.com/in/shivender-pratap-singh-kanwar-27320612a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"}
+            { icon: <Linkedin />, link: "https://www.linkedin.com/in/shivender-pratap-singh-kanwar-27320612a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" }
         ]
-        
     },
     {
         img: "/Isha.jpeg",
         id: 3,
         name: "Ms. Isha Chande",
         position: "Woman Entrepreneur, Business Leader",
+        description: "Isha Chande is a successful entrepreneur and a leader in business development.",
         social: [
             { icon: <Instagram />, link: "https://www.instagram.com/isha.0505?igsh=cjh2ODk5OWVibXZy" },
-           { icon: <Linkedin/>, link: "https://www.linkedin.com/in/isha-chande-6171a6158?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"}
+            { icon: <Linkedin />, link: "https://www.linkedin.com/in/isha-chande-6171a6158?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" }
         ]
     },
-    {img: "/Zeeshan.jpeg",
+    {
+        img: "/Zeeshan.jpeg",
         id: 4,
         name: "Mr. Zesshan Ali Syed",
         position: "Tech-Influencer and Entrepreneur",
+        description: "Zeeshan Ali Syed is a renowned tech influencer and entrepreneur in the tech space.",
         social: [
             { icon: <Instagram />, link: "https://www.instagram.com/nz.for.genz?igsh=NXkzNzRtcjkwMzE0" },
-            { icon: <Linkedin/>, link: "https://www.linkedin.com/in/zeeshan-ali-562109131?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"}
-        ]
-    },
-    {
-        img: "/unknown2.jpeg",
-        id: 5,
-        name: "? ? ?",
-        // position: "Author, Poet, Lyricist, Screenwriter",
-        social: [
-            // { icon: <Twitter />, link: "#" },
-            // { icon: <Instagram />, link: "#" }
-        ]
-    },
-    {
-        img: "/unknown2.jpeg",
-        id: 6,
-        name: "? ? ?",
-        // position: "Author, Poet, Lyricist, Screenwriter",
-        social: [
-            // { icon: <Twitter />, link: "#" },
-            // { icon: <Instagram />, link: "#" }
+            { icon: <Linkedin />, link: "https://www.linkedin.com/in/zeeshan-ali-562109131?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" }
         ]
     },
 ];
@@ -68,13 +53,14 @@ const speaker_card = [
 const Speaker = () => {
     const [hoveredCard, setHoveredCard] = useState(null); // State to track hovered card
     const [visibleCount, setVisibleCount] = useState(4); // State to track visible cards
-
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+    const navigate = useNavigate(); // Using useHistory for navigation
 
     const handleViewMore = () => {
         setVisibleCount(prevCount => prevCount + 4); // Load more cards
+    };
+
+    const handleKnowMore = () => {
+        navigate('/speakers-details');  // Navigate to the details page
     };
 
     return (
@@ -99,20 +85,17 @@ const Speaker = () => {
                                 onMouseLeave={() => setHoveredCard(null)}
                             >
                                 <div
-                                    className={`relative flex flex-col rounded-t-[15px] overflow-hidden ${hoveredCard === e.id ? '' : 'bg-[#2d2d2d]'
-                                        }`}
+                                    className={`relative flex flex-col rounded-t-[15px] overflow-hidden ${hoveredCard === e.id ? '' : 'bg-[#2d2d2d]'}`
+                                    }
                                 >
-                                    {/* Image with opacity change on hover */}
                                     <img
                                         src={e.img}
                                         alt={e.name}
-                                        className={`w-full rounded-tl-[15px] rounded-tr-[15px] transition-opacity duration-300 ${hoveredCard === e.id ? 'opacity-50' : 'opacity-100'
-                                            }`}
+                                        className={`w-full rounded-tl-[15px] rounded-tr-[15px] transition-opacity duration-300 ${hoveredCard === e.id ? 'opacity-50' : 'opacity-100'}`}
                                     />
-                                    {/* Icons displayed on hover */}
                                     <div
-                                        className={`absolute bottom-0 left-0 right-0 flex justify-center space-x-4 transition-transform duration-500 ease-in-out ${hoveredCard === e.id ? 'translate-y-0 py-2' : 'translate-y-full'
-                                            }`}
+                                        className={`absolute bottom-0 left-0 right-0 flex justify-center space-x-4 transition-transform duration-500 ease-in-out ${hoveredCard === e.id ? 'translate-y-0 py-2' : 'translate-y-full'}`
+                                        }
                                     >
                                         {e.social.map((social, index) => (
                                             <a
@@ -134,7 +117,14 @@ const Speaker = () => {
                             </div>
                         ))}
                     </div>
-
+                    <div className="text-center mt-8">
+                        <button
+                            onClick={handleKnowMore}
+                            className="bg-[#e62b1e] text-white py-2 px-6 rounded-md shadow-lg"
+                        >
+                            Know More About Speakers
+                        </button>
+                    </div>
                 </div>
             </section>
         </div>
