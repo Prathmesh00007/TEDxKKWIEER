@@ -8,8 +8,9 @@ const speaker_card = [
         name: "Ranjit Bajaj",
         position: "Founder of Minerva Punjab FC",
         social: [
-            { icon: <Twitter />, link: "#" },
-            { icon: <Linkedin />, link: "#" },
+            { icon: <Instagram />, link: "https://www.instagram.com/ranjitbajaj?igsh=MXN0ZTV1cHlhbjV1aQ==" },
+            { icon: <Linkedin/>, link: "https://www.linkedin.com/in/ranjit-bajaj-6855675a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+            { icon: <Twitter/>, link: "https://x.com/THE_RanjitBajaj" },
         ]
     },
     {
@@ -18,28 +19,28 @@ const speaker_card = [
         name: "Col. Shivender Pratap Singh Kanwar",
         position: "Founder of Team Global Security Solutions",
         social: [
-            { icon: <Twitter />, link: "#" },
-            { icon: <Linkedin />, link: "#" },
-            { icon: <Facebook />, link: "#" }
+            { icon: <Instagram />, link: "https://www.instagram.com/shivender.kanwar?igsh=ejMwZDdndDlvMWsz" },
+            { icon: <Linkedin/>, link: "https://www.linkedin.com/in/shivender-pratap-singh-kanwar-27320612a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"}
         ]
+        
     },
     {
-        img: "/unknown2.jpeg",
+        img: "/Isha.jpeg",
         id: 3,
-        name: "? ? ?",
-        // position: "Author, Poet, Lyricist, Screenwriter",
+        name: "Ms. Isha Chande",
+        position: "Woman Entrepreneur, Business Leader",
         social: [
-            // { icon: <Twitter />, link: "#" },
-            // { icon: <Instagram />, link: "#" }
+            { icon: <Instagram />, link: "https://www.instagram.com/isha.0505?igsh=cjh2ODk5OWVibXZy" },
+           { icon: <Linkedin/>, link: "https://www.linkedin.com/in/isha-chande-6171a6158?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"}
         ]
     },
-    {img: "/unknown2.jpeg",
+    {img: "/Zeeshan.jpeg",
         id: 4,
-        name: "? ? ?",
-        // position: "Author, Poet, Lyricist, Screenwriter",
+        name: "Mr. Zesshan Ali Syed",
+        position: "Tech-Influencer and Entrepreneur",
         social: [
-            // { icon: <Twitter />, link: "#" },
-            // { icon: <Instagram />, link: "#" }
+            { icon: <Instagram />, link: "https://www.instagram.com/nz.for.genz?igsh=NXkzNzRtcjkwMzE0" },
+            { icon: <Linkedin/>, link: "https://www.linkedin.com/in/zeeshan-ali-562109131?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"}
         ]
     },
     {
