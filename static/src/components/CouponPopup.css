@@ -1,0 +1,79 @@
+/* CouponPopup.css */
+
+/* Set the font globally */
+body {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .coupon-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);  /* Dark background overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's on top of all content */
+  }
+  
+  .coupon-popup-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    color: #333;
+  }
+  
+  .popup-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e62b1e;
+    margin-bottom: 15px;
+  }
+  
+  .popup-subheader {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .coupon-list {
+    margin-bottom: 20px;
+  }
+  
+  .coupon-item {
+    margin-bottom: 20px;
+  }
+  
+  .coupon-code {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #e62b1e;
+  }
+  
+  .discounted-price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+  }
+  
+  .close-btn {
+    background-color: #e62b1e;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .close-btn:hover {
+    background-color: #c62b1e;
+  }
+  
