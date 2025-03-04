@@ -27,7 +27,7 @@ const speaker_card = [
         ]
     },
     {
-        img: "/Isha.jpeg",
+        img: "/Isha.jpg",
         id: 3,
         name: "Ms. Isha Chande",
         position: "Woman Entrepreneur, Business Leader",
@@ -38,7 +38,7 @@ const speaker_card = [
         ]
     },
     {
-        img: "/Zeeshan.jpeg",
+        img: "/Zeeshan.jpg",
         id: 4,
         name: "Mr. Zesshan Ali Syed",
         position: "Tech-Influencer and Entrepreneur",
