@@ -1,41 +1,23 @@
 import React, { useEffect } from 'react';
-import novotel from '../assets/bg.png';
-import vb from '../assets/bg.png';
-import spice from '../assets/bg.png';
-import creme from '../assets/bg.png';
-import fm from '../assets/bg.png';
-import otc from '../assets/bg.png';
+import deepakBuilders from '../assets/deepak.jpeg'; // Replace with actual image paths
+import redFM from '../assets/red.jpeg';
+import gatewayNashik from '../assets/red.jpeg';
 
 const sponsors = [
   {
-    name: 'Novotel',
-    image: novotel,
-    sponsorshipType: 'Hospitality Partner'
+    name: 'Deepak Builders and Developers',
+    image: deepakBuilders,
+    sponsorshipType: 'Title Sponsor'
   },
   {
-    name: 'Vending Brothers',
-    image: vb,
-    sponsorshipType: 'Merchandise Partner'
-  },
-  {
-    name: 'The Spice Route',
-    image: spice,
-    sponsorshipType: 'Food Partner'
-  },
-  {
-    name: 'Creme',
-    image: creme,
-    sponsorshipType: 'Styling Partner'
-  },
-  {
-    name: '94.3 FM',
-    image: fm,
+    name: 'RED FM 93.5',
+    image: redFM,
     sponsorshipType: 'Radio Partner'
   },
   {
-    name: 'OTC Resorts and Water Park',
-    image: otc,
-    sponsorshipType: 'Exclusive Partner'
+    name: 'Gateway Nashik',
+    image: gatewayNashik,
+    sponsorshipType: 'Hospitality Sponsor'
   }
 ];
 
@@ -44,39 +26,12 @@ const Sponsor = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  // Split sponsors into rows
-  const row1 = sponsors.slice(0, 1);
-  const row2 = sponsors.slice(1, 4);
-  const row3 = sponsors.slice(4, 6);
-
   return (
     <div style={styles.container}>
-      {/* First row with 1 sponsor */}
-      <div style={styles.row}>
-        {row1.map((sponsor, index) => (
-          <div key={index} style={styles.sponsorCardSingle}>
-            <img src={sponsor.image} alt={sponsor.name} style={styles.sponsorImage} />
-            <h3>{sponsor.name}</h3>
-            <p>{sponsor.sponsorshipType}</p>
-          </div>
-        ))}
-      </div>
-
-      {/* Second row with 3 sponsors */}
-      <div style={styles.row}>
-        {row2.map((sponsor, index) => (
-          <div key={index} style={styles.sponsorCardTriple}>
-            <img src={sponsor.image} alt={sponsor.name} style={styles.sponsorImage} />
-            <h3>{sponsor.name}</h3>
-            <p>{sponsor.sponsorshipType}</p>
-          </div>
-        ))}
-      </div>
-
-      {/* Third row with 2 sponsors */}
-      <div style={styles.row}>
-        {row3.map((sponsor, index) => (
-          <div key={index} style={styles.sponsorCardDouble}>
+      {/* Row for sponsors */}
+      <div style={styles.sponsorRow}>
+        {sponsors.map((sponsor, index) => (
+          <div key={index} style={styles.sponsorCard}>
             <img src={sponsor.image} alt={sponsor.name} style={styles.sponsorImage} />
             <h3>{sponsor.name}</h3>
             <p>{sponsor.sponsorshipType}</p>
@@ -91,34 +46,24 @@ const styles = {
   container: {
     display: 'flex',
     flexDirection: 'column',
+    alignItems: 'center',  // Center align everything in the container
     margin: '20px'
   },
-  row: {
-    display: 'flex',
-    justifyContent: 'center',
-    marginBottom: '20px'
+  sponsorRow: {
+    display: 'flex',  // Use flex to arrange items in a row
+    justifyContent: 'space-around',  // Distribute space evenly
+    width: '100%',  // Ensure the row takes up full width
+    marginTop: '20px',  // Space between heading and sponsors
   },
-  sponsorCardSingle: {
+  sponsorCard: {
     textAlign: 'center',
-    width: '100%',
-    marginBottom: '20px'
-  },
-  sponsorCardTriple: {
-    textAlign: 'center',
-    width: '30%',
-    margin: '0 10px'
-  },
-  sponsorCardDouble: {
-    textAlign: 'center',
-    width: '45%',
-    margin: '0 10px'
+    width: '30%',  // Each sponsor card takes up 30% of the row width
+    marginBottom: '20px',  // Space below each card
   },
   sponsorImage: {
-    width: 'auto',  // Allow width to be dynamic and maintain original ratio
-    height: '200px', // Fixed height to ensure uniformity
-    objectFit: 'contain', // Prevent cutting while maintaining the image aspect ratio
-    borderRadius: '10px', // Optional rounded corners
+    width: 'auto',  // Allow width to be dynamic and maintain the original ratio
+    height: '200px',  // Fixed height for consistency
+    objectFit: 'contain',  // Maintain aspect ratio and avoid stretching
+    borderRadius: '10px',  // Optional: rounded corners
   }
 };
-
-export default Sponsor;

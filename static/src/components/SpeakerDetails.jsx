@@ -47,6 +47,29 @@ const speaker_card = [
             { icon: <Linkedin />, link: "https://www.linkedin.com/in/zeeshan-ali-562109131?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" }
         ]
     },
+    {
+        img: "Iqlipse.jpeg",
+        id: 5,
+        name: "Mr.Deepanshu Raj (Iqlipse Nova)",
+        position: "Musician",
+        description:  "Deepanshu Raj, known as Iqlipse Nova, is an IIT Delhi graduate who transitioned from engineering to becoming a successful independent musician. Blending soulful melodies, poetry, and experimental sounds, he has built a strong fanbase with over 112 million YouTube streams. His viral hits, including Mera Safar, Dil Savera, and Khwab, have deeply resonated with audiences. A masterful lyricist and visionary creator, he pushes creative boundaries with thought-provoking storytelling and modern soulful music. His journey from IIT Delhi to viral music stardom reflects self-belief, perseverance, and artistic expression. Embodying Rise Through Resonance, he inspires individuals to follow unconventional paths and redefine success on their own terms.",
+        social: [
+            { icon: <Instagram />, link: "https://www.instagram.com/iqlipse_nova/" },
+            { icon: <Twitter />, link: "https://x.com/iqlipse_nova?t=l8NrTjNahbXf_mq3thKXpQ&s=09" }
+        ]
+    },
+    {
+        img: "Karnik.jpeg",
+        id: 6,
+        name: "Hon.Shri Sandeepji Karnik(I.P.S.)",
+        position: "Commissioner of Police, Nashik City",
+        description:  "Deepanshu Raj, known as Iqlipse Nova, is an IIT Delhi graduate who transitioned from engineering to becoming a successful independent musician. Blending soulful melodies, poetry, and experimental sounds, he has built a strong fanbase with over 112 million YouTube streams. His viral hits, including Mera Safar, Dil Savera, and Khwab, have deeply resonated with audiences. A masterful lyricist and visionary creator, he pushes creative boundaries with thought-provoking storytelling and modern soulful music. His journey from IIT Delhi to viral music stardom reflects self-belief, perseverance, and artistic expression. Embodying Rise Through Resonance, he inspires individuals to follow unconventional paths and redefine success on their own terms.",
+        social: [
+            { icon: <Instagram />, link: "https://www.instagram.com/iqlipse_nova/" },
+            { icon: <Twitter />, link: "https://x.com/iqlipse_nova?t=l8NrTjNahbXf_mq3thKXpQ&s=09" }
+        ]
+    },
+    
 ];
 
 const SpeakerDetails = () => {

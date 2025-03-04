@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import CouponPopup from "./CouponPopup";
 import Contact from "./Contact";
 import CountDown from "./Event/CountDown/CountDown.jsx";
 import Testimonial from "./Testimonial";
@@ -9,45 +10,49 @@ import "./homepage/home.css";
 import Homie from "./homepage/Homie.jsx";
 import AboutSection from "./About.jsx";
 import ButtonToStart from "./homepage/buyButton.js";
+import TimeLine from "./TimeLine.jsx";
+import Sponsors from "./sponsors.jsx";
 
 
 // import { Link } from "react-router-dom";
 
-
 const Home = () => {
   const [scrollLocked, setScrollLocked] = useState(true);
+  const [showPopup, setShowPopup] = useState(true);
 
   useEffect(() => {
     const handleScroll = (event) => {
-      // Define the scroll limit
-      const scrollLimit = 500; // Adjust this height to control scrolling limit
+      const scrollLimit = 500;
       if (scrollLocked && window.scrollY > scrollLimit) {
-        window.scrollTo(0, scrollLimit); // Lock user at the defined scroll height
+        window.scrollTo(0, scrollLimit);
       }
     };
 
-    // Add scroll event listener
     window.addEventListener("scroll", handleScroll);
 
-    // Cleanup event listener on component unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [scrollLocked]);
 
-  // Unlock scroll on user action or after a timeout
   const unlockScroll = () => {
     setTimeout(() => {
-      setScrollLocked(false); // Allow free scrolling
-    }, 100); // Unlock after 3 seconds
+      setScrollLocked(false);
+    }, 3000);
   };
 
   useEffect(() => {
-    unlockScroll(); // Trigger unlock scroll logic on mount
+    unlockScroll();
   }, []);
+
+  const closePopup = () => {
+    setShowPopup(false); // Close the popup when the button is clicked
+  };
 
   return (
     <>
+      {showPopup && <CouponPopup onClose={closePopup} />} {/* Show the popup on load */}
+      
       <div id="home max-w-screen overflow-x-hidden">
 
         <section id="header">
@@ -124,7 +129,7 @@ const Home = () => {
             >
               Doors Open: <span className="font-bold text-[#e62b1e]">8:00 AM</span>
             </p>
-          
+            
           </div>
 
           {/* Countdown Timer */}
@@ -146,12 +151,12 @@ const Home = () => {
               Through Resonance." <br /> Let’s come together to spark ideas that
               inspire, elevate, and transform our world!
             </p>
-          <div className="mt-8">
-            <ButtonToStart />
-          </div>
           </div>
 
           {/* Call to Action */}
+          <div className="mt-8">
+            <ButtonToStart />
+          </div>
         </div>
       </div>
     </section>
@@ -161,6 +166,12 @@ const Home = () => {
       <div id="homespeakers">
         <RecentSpeaker />
       </div>
+      <section>
+        <TimeLine/>
+      </section>
+      <section id="homesponsors">
+        <Sponsors/>
+      </section>
 
       <Testimonial />
       <Contact />

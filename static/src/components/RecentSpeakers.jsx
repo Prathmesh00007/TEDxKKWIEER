@@ -48,6 +48,29 @@ const speaker_card = [
             { icon: <Linkedin />, link: "https://www.linkedin.com/in/zeeshan-ali-562109131?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" }
         ]
     },
+    {
+        img: "/Iqlipse.jpeg",
+        id: 5,
+        name: "Mr. Iqlipse Nova",
+        position: "Musician",
+        description: "",
+        social: [
+            { icon: <Instagram />, link: "https://www.instagram.com/iqlipse_nova/" },
+            { icon: <Twitter />, link: "https://x.com/iqlipse_nova?t=l8NrTjNahbXf_mq3thKXpQ&s=09" }
+        ]
+    },
+{
+        img: "Karnik.jpeg",
+        id: 6,
+        name: "Hon.Shri Sandeepji Karnik(I.P.S.)",
+        position: "Commissioner of Police, Nashik City",
+        description:  "",
+        social: [
+            { icon: <Instagram />, link: "https://www.instagram.com/iqlipse_nova/" },
+            { icon: <Twitter />, link: "https://x.com/iqlipse_nova?t=l8NrTjNahbXf_mq3thKXpQ&s=09" }
+        ]
+    },
+   
 ];
 
 const Speaker = () => {
