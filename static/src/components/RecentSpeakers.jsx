@@ -49,7 +49,7 @@ const speaker_card = [
         ]
     },
     {
-        img: "/Iqlipse.jpeg",
+        img: "/Iqlipse.png",
         id: 5,
         name: "Mr. Iqlipse Nova",
         position: "Musician",
@@ -60,7 +60,7 @@ const speaker_card = [
         ]
     },
 {
-        img: "Karnik.jpeg",
+        img: "/Karnik.png",
         id: 6,
         name: "Hon.Shri Sandeepji Karnik(I.P.S.)",
         position: "Commissioner of Police, Nashik City",
@@ -75,11 +75,11 @@ const speaker_card = [
 
 const Speaker = () => {
     const [hoveredCard, setHoveredCard] = useState(null); // State to track hovered card
-    const [visibleCount, setVisibleCount] = useState(4); // State to track visible cards
+    const [visibleCount, setVisibleCount] = useState(6); // State to track visible cards
     const navigate = useNavigate(); // Using useHistory for navigation
 
     const handleViewMore = () => {
-        setVisibleCount(prevCount => prevCount + 4); // Load more cards
+        setVisibleCount(prevCount => prevCount + 6); // Load more cards
     };
 
     const handleKnowMore = () => {

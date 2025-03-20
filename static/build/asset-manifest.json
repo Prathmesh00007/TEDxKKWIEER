@@ -1,21 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.b5cdbdcc.css",
-    "main.js": "/static/js/main.fff89de9.js",
+    "main.css": "/static/css/main.dd0fe3eb.css",
+    "main.js": "/static/js/main.514adc0e.js",
     "static/media/intromob.mp4": "/static/media/intromob.8befdd91b887647bf41d.mp4",
     "static/media/intro.mp4": "/static/media/intro.032938c0f313930072e9.mp4",
     "static/media/ContactBg.jpg": "/static/media/ContactBg.2bf53a752dd6ec0f4676.jpg",
     "static/media/TED_Logo_New.png": "/static/media/TED_Logo_New.6be018abe02368607959.png",
+    "static/media/deepak.jpg": "/static/media/deepak.6da5250649256a71f9bb.jpg",
+    "static/media/red.png": "/static/media/red.05bfd3722baff2c8b954.png",
     "index.html": "/index.html",
     "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
-    "main.b5cdbdcc.css.map": "/static/css/main.b5cdbdcc.css.map",
-    "main.fff89de9.js.map": "/static/js/main.fff89de9.js.map"
+    "main.dd0fe3eb.css.map": "/static/css/main.dd0fe3eb.css.map",
+    "main.514adc0e.js.map": "/static/js/main.514adc0e.js.map"
   },
   "entrypoints": [
-    "static/css/main.b5cdbdcc.css",
-    "static/js/main.fff89de9.js"
+    "static/css/main.dd0fe3eb.css",
+    "static/js/main.514adc0e.js"
   ]
 }

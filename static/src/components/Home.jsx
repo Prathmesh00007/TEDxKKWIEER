@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import CouponPopup from "./CouponPopup";
 import Contact from "./Contact";
 import CountDown from "./Event/CountDown/CountDown.jsx";
 import Testimonial from "./Testimonial";
@@ -18,7 +17,6 @@ import Sponsors from "./sponsors.jsx";
 
 const Home = () => {
   const [scrollLocked, setScrollLocked] = useState(true);
-  const [showPopup, setShowPopup] = useState(true);
 
   useEffect(() => {
     const handleScroll = (event) => {
@@ -45,13 +43,9 @@ const Home = () => {
     unlockScroll();
   }, []);
 
-  const closePopup = () => {
-    setShowPopup(false); // Close the popup when the button is clicked
-  };
 
   return (
     <>
-      {showPopup && <CouponPopup onClose={closePopup} />} {/* Show the popup on load */}
       
       <div id="home max-w-screen overflow-x-hidden">
 

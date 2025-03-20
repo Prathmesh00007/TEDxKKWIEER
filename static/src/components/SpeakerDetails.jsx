@@ -48,7 +48,7 @@ const speaker_card = [
         ]
     },
     {
-        img: "Iqlipse.jpeg",
+        img: "/Iqlipse.png",
         id: 5,
         name: "Mr.Deepanshu Raj (Iqlipse Nova)",
         position: "Musician",
@@ -59,7 +59,7 @@ const speaker_card = [
         ]
     },
     {
-        img: "Karnik.jpeg",
+        img: "/Karnik.png",
         id: 6,
         name: "Hon.Shri Sandeepji Karnik(I.P.S.)",
         position: "Commissioner of Police, Nashik City",

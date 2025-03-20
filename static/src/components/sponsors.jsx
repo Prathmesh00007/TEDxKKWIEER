@@ -1,18 +1,18 @@
 import React, { useEffect } from 'react';
-import deepakBuilders from '../assets/deepak.jpeg'; // Replace with actual image paths
-import redFM from '../assets/red.jpeg';
-import gatewayNashik from '../assets/red.jpeg';
+import deepakBuilders from '../assets/deepak.jpg'; // Replace with actual image paths
+import redFM from '../assets/red.png';
+import gatewayNashik from '../assets/gateway.jpg';
 
 const sponsors = [
-  {
-    name: 'Deepak Builders and Developers',
-    image: deepakBuilders,
-    sponsorshipType: 'Title Sponsor'
-  },
   {
     name: 'RED FM 93.5',
     image: redFM,
     sponsorshipType: 'Radio Partner'
+  },
+  {
+    name: 'Deepak Builders and Developers',
+    image: deepakBuilders,
+    sponsorshipType: 'Title Sponsor'
   },
   {
     name: 'Gateway Nashik',
@@ -32,9 +32,9 @@ const Sponsor = () => {
       <div style={styles.sponsorRow}>
         {sponsors.map((sponsor, index) => (
           <div key={index} style={styles.sponsorCard}>
+            <p className='text-xl font-semibold'>{sponsor.sponsorshipType}</p>-
             <img src={sponsor.image} alt={sponsor.name} style={styles.sponsorImage} />
-            <h3>{sponsor.name}</h3>
-            <p>{sponsor.sponsorshipType}</p>
+            <h3 className='mt-4 font-semibold'>{sponsor.name}</h3>
           </div>
         ))}
       </div>
@@ -77,12 +77,10 @@ const Sponsors = () => {
     <>
       <section className="about-fixed-image fixed-image-heading mt-5">
         <div>
-          <h1 className="my-4 text-center" style={{ fontFamily: "'Poppins', sans-serif" }}>
-            <span style={{ color: "red" }}>TEDx</span> KKWIEER
-          </h1>
-          <h2 className="my-3 text-center blur-fixed-image" style={{ fontFamily: "'Poppins', sans-serif" }}>
-            Special thanks to our valued sponsors for their generous support and contributions
-          </h2>
+          <h1 className="text-white text-center">Our Sponsors</h1>
+          <div>
+            <img src="X.png" alt="" className='absolute '/>
+          </div>
           <Sponsor />
         </div>
       </section>
