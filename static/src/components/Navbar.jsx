@@ -76,18 +76,41 @@ const Navbar = () => {
                 </li>
                 <li onClick={ToggleButton}>
                   <a
-                    href="https://www.kkwagh.edu.in/"
+                    href="https://www.ted.com/tedx/events/60823"
                     target="_blank"
                     rel="noreferrer"
                   >
                     <span>TED<sup>x</sup>KKWIEER</span>
                   </a>
                 </li>
+                <li onClick={ToggleButton}>
+                  <a
+                    href="https://www.kkwagh.edu.in/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span>KK Wagh Education Society</span>
+                  </a>
+                </li>
+                <li onClick={ToggleButton}>
+                  <a
+                    href="https://www.kkwagh.edu.in/engineering/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span>K.K Wagh Institute Of Engineering Education and Research</span>
+                  </a>
+                </li>
               </ul>
             </li>
             <li onClick={ToggleButton}>
-              <a href="./#speaker">
+              <a href="./#homespeakers">
                 <span>Speakers</span>
+              </a>
+            </li>
+            <li onClick={ToggleButton}>
+              <a href="./#homesponsors">
+                <span>Sponsors</span>
               </a>
             </li>
             <li onClick={ToggleButton}>

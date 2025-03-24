@@ -26,7 +26,7 @@ const speaker_card = [
         ]
     },
     {
-        img: "/Isha.jpg",
+        img: "/Isha.jpeg",
         id: 3,
         name: "Ms. Isha Chande",
         position: "Woman Entrepreneur, Business Leader",
@@ -37,7 +37,7 @@ const speaker_card = [
         ]
     },
     {
-        img: "/Zeeshan.jpg",
+        img: "/Zeeshan.jpeg",
         id: 4,
         name: "Mr. Zesshan Ali Syed",
         position: "Tech-Influencer and Entrepreneur",
@@ -65,8 +65,8 @@ const speaker_card = [
         position: "Commissioner of Police, Nashik City",
         description:  "Deepanshu Raj, known as Iqlipse Nova, is an IIT Delhi graduate who transitioned from engineering to becoming a successful independent musician. Blending soulful melodies, poetry, and experimental sounds, he has built a strong fanbase with over 112 million YouTube streams. His viral hits, including Mera Safar, Dil Savera, and Khwab, have deeply resonated with audiences. A masterful lyricist and visionary creator, he pushes creative boundaries with thought-provoking storytelling and modern soulful music. His journey from IIT Delhi to viral music stardom reflects self-belief, perseverance, and artistic expression. Embodying Rise Through Resonance, he inspires individuals to follow unconventional paths and redefine success on their own terms.",
         social: [
-            { icon: <Instagram />, link: "https://www.instagram.com/iqlipse_nova/" },
-            { icon: <Twitter />, link: "https://x.com/iqlipse_nova?t=l8NrTjNahbXf_mq3thKXpQ&s=09" }
+            { icon: <Instagram />, link: "https://www.instagram.com/sandeep_karnik_ips/" },
+          
         ]
     },
     

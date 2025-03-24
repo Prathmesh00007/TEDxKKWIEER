@@ -27,7 +27,7 @@ const speaker_card = [
         ]
     },
     {
-        img: "/Isha.jpg",
+        img: "/Isha.jpeg",
         id: 3,
         name: "Ms. Isha Chande",
         position: "Woman Entrepreneur, Business Leader",
@@ -38,7 +38,7 @@ const speaker_card = [
         ]
     },
     {
-        img: "/Zeeshan.jpg",
+        img: "/Zeeshan.jpeg",
         id: 4,
         name: "Mr. Zesshan Ali Syed",
         position: "Tech-Influencer and Entrepreneur",
@@ -66,8 +66,8 @@ const speaker_card = [
         position: "Commissioner of Police, Nashik City",
         description:  "",
         social: [
-            { icon: <Instagram />, link: "https://www.instagram.com/iqlipse_nova/" },
-            { icon: <Twitter />, link: "https://x.com/iqlipse_nova?t=l8NrTjNahbXf_mq3thKXpQ&s=09" }
+            { icon: <Instagram />, link: "https://www.instagram.com/sandeep_karnik_ips/" },
+          
         ]
     },
    

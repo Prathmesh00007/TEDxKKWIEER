@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
-import deepakBuilders from '../assets/deepak.jpg'; // Replace with actual image paths
-import redFM from '../assets/red.png';
-import gatewayNashik from '../assets/gateway.jpg';
+import deepakBuilders from '../assets/deepak.jpeg'; // Replace with actual image paths
+import redFM from '../assets/red.jpeg';
 
 const sponsors = [
   {
@@ -15,9 +14,9 @@ const sponsors = [
     sponsorshipType: 'Title Sponsor'
   },
   {
-    name: 'Gateway Nashik',
-    image: gatewayNashik,
-    sponsorshipType: 'Hospitality Sponsor'
+    name: 'Surbhi Hotel',
+    image: "IMG-20250324-WA0002.jpg",
+    sponsorshipType: 'Food Sponsor'
   }
 ];
 
@@ -31,10 +30,21 @@ const Sponsor = () => {
       {/* Row for sponsors */}
       <div style={styles.sponsorRow}>
         {sponsors.map((sponsor, index) => (
-          <div key={index} style={styles.sponsorCard}>
-            <p className='text-xl font-semibold'>{sponsor.sponsorshipType}</p>-
-            <img src={sponsor.image} alt={sponsor.name} style={styles.sponsorImage} />
-            <h3 className='mt-4 font-semibold'>{sponsor.name}</h3>
+          <div
+            key={index}
+            style={index === 1 ? styles.middleSponsorCard : styles.sponsorCard}
+          >
+            <p className='text-xl font-semibold' style={index === 1 ? styles.middleText : styles.sponsorText}>
+            {sponsor.sponsorshipType}</p>
+           <img
+            src={sponsor.image}
+            alt={sponsor.name}
+            style={index === 1 ? styles.middleSponsorImage : styles.sponsorImage}
+          />
+          <h3 className='mt-4 font-semibold' style={index === 1 ? styles.middleText : styles.sponsorText}>
+            {sponsor.name}
+          </h3>
+
           </div>
         ))}
       </div>
@@ -51,25 +61,48 @@ const styles = {
     fontFamily: "'Poppins', sans-serif",  // Apply Poppins font globally
   },
   sponsorRow: {
-    display: 'flex',  // Use flex to arrange items in a row
-    justifyContent: 'space-around',  // Distribute space evenly
+    display: 'grid',  // Use CSS Grid to make the middle one bigger
+    gridTemplateColumns: '1fr 2fr 1fr',  // 3 columns with the middle one twice as wide
+    gap: '20px',  // Add spacing between the cards
     width: '100%',  // Ensure the row takes up full width
     marginTop: '20px',  // Space between heading and sponsors
   },
   sponsorCard: {
-    display: 'flex',  // Use flexbox to arrange the image and text vertically
-    flexDirection: 'column',  // Stack image and text vertically
-    alignItems: 'center',  // Center align text under the image
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
     textAlign: 'center',
-    width: '30%',  // Each sponsor card takes up 30% of the row width
-    marginBottom: '20px',  // Space below each card
+    marginBottom: '20px',
+  },
+  middleSponsorCard: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    textAlign: 'center',
+    marginBottom: '20px',
+    // This will be wider because of gridTemplateColumns
   },
   sponsorImage: {
-    width: 'auto',  // Allow width to be dynamic and maintain the original ratio
-    height: '200px',  // Fixed height for consistency
-    objectFit: 'contain',  // Maintain aspect ratio and avoid stretching
-    borderRadius: '10px',  // Optional: rounded corners
-  }
+    width: 'auto',
+    height: '250px',  // Fixed height for consistency for side sponsors
+    objectFit: 'contain',
+    borderRadius: '10px',
+  },
+  // Middle sponsor adjustments
+  middleSponsorImage: {
+    width: 'auto',
+    height: '300px',  // Bigger image height for middle sponsor
+    objectFit: 'contain',
+    borderRadius: '10px',
+  },
+  sponsorText: {
+    fontSize: '1rem',  // Default font size for side sponsors
+    fontWeight: 'bold',
+  },
+  middleText: {
+    fontSize: '1.25rem',  // Bigger font size for middle sponsor
+    fontWeight: 'bold',
+  },
 };
 
 const Sponsors = () => {
@@ -77,10 +110,12 @@ const Sponsors = () => {
     <>
       <section className="about-fixed-image fixed-image-heading mt-5">
         <div>
-          <h1 className="text-white text-center">Our Sponsors</h1>
-          <div>
-            <img src="X.png" alt="" className='absolute '/>
-          </div>
+          <h1 className="my-4 text-center" style={{ fontFamily: "'Poppins', sans-serif" }}>
+            <span style={{ color: "red" }}>TEDx</span> KKWIEER
+          </h1>
+          <h2 className="my-3 text-center blur-fixed-image" style={{ fontFamily: "'Poppins', sans-serif" }}>
+            Special thanks to our valued sponsors for their generous support and contributions
+          </h2>
           <Sponsor />
         </div>
       </section>
